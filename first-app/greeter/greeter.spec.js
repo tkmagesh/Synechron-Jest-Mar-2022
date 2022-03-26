@@ -42,7 +42,7 @@ const DateService = require('./dateService');
 }) */
 
 //Version 2.0
-class MockDateService{
+/* class MockDateService{
     constructor(currentDate){
         this.currentDate = currentDate
     }
@@ -78,5 +78,54 @@ describe("Greeter", () => {
 
         //Assert
         expect(actualResult).toBe(expectedResult)
+    })
+}) */
+
+
+//Version 3.0 (Using jest.fn() mock)
+/* 
+describe("Mocking", () => {
+     it("test - 1", () => {
+        const fn = jest.fn(() => { return "Hi there" })
+        //console.log(fn())
+        expect(fn).toHaveBeenCalled()
+    })
+}) 
+*/
+
+describe("Greeter", () => {
+    it('Should greet with "Good Afternoon" when greeted after 12', () => {
+        //Arrange
+        const afterNoonDateService = {
+            getCurrent : jest.fn(() => new Date('26-Mar-2022 14:00:00'))
+        }
+        const sut = new Greeter(afterNoonDateService),
+            userName = 'Magesh',
+            expectedResult = `Hi Magesh, Good Afternoon`;
+
+        //Act
+        const actualResult = sut.greet(userName)
+
+        //Assert
+        expect(actualResult).toBe(expectedResult)
+        expect(afterNoonDateService.getCurrent).toHaveBeenCalled()
+    })
+
+    it('Should greet with "Good Morning" when greeted before 12', () => {
+        //Arrange
+        const morningDateService = {
+            getCurrent : jest.fn(() => new Date('26-Mar-2022 10:00:00'))
+        };
+
+        const sut = new Greeter(morningDateService),
+            userName = 'Magesh',
+            expectedResult = `Hi Magesh, Good Morning`;
+
+        //Act
+        const actualResult = sut.greet(userName)
+
+        //Assert
+        expect(actualResult).toBe(expectedResult)
+        expect(morningDateService.getCurrent).toHaveBeenCalled()
     })
 })
