@@ -54,3 +54,13 @@ mkdir first-app
 cd first-app
 npm init -y
 npm install --save-dev jest
+
+
+APIs Organize Tests
+    describe
+    it
+    test
+    fit
+    fdescribe
+    xit
+    xdescribe
