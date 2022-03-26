@@ -12,3 +12,45 @@ Methodolgy:
     No powerpoints
     100% hands on
 
+Repository:
+    https://github.com/tkmagesh/synechron-jest-mar-2022
+
+Test
+    APIs 
+        to organize the tests
+            Arrange
+                prepare the environment for testing
+                important : Isolate the SUT from all its dependencies
+            Act
+                perform the operation
+            Assert
+                Verify the result
+
+Jasmine
+    expect(result).toBe(expectedResult) // toBe => matcher
+    Jasmine Spy
+
+    Assert.AreEqual(result, expectedResult);
+
+    result.should.be.equal(expectedResult);
+
+Mocha
+    APIs for organizing tests
+        chai.js
+        Sinon.js
+
+Jest
+
+Falsy
+    null
+    undefined
+    false
+    0
+    ''
+
+
+
+mkdir first-app
+cd first-app
+npm init -y
+npm install --save-dev jest
