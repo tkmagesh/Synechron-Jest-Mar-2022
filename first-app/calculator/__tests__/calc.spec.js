@@ -4,6 +4,7 @@ test('first test', () => {
     expect(true).toBeTruthy()
 })
 
+
 describe('Calculator', () => {
     it('Should add 2 numbers', () => {
         //Arrange
