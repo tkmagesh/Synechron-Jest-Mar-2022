@@ -1,0 +1,14 @@
+Yuvaraj
+Chandrakanth
+
+Schedule:
+    Commence    : 9:00 AM
+    Tea Break   : 11:0 AM (20 mins)
+    Lunch Break : 1:00 PM (1 Hr)
+    Tea Break   : 3:30 PM (20 mins)
+    Wind up     : 5:00 PM
+
+Methodolgy:
+    No powerpoints
+    100% hands on
+
