@@ -70,3 +70,7 @@ Dependency Inversion Principle
     Dependency Creation should be separated from the usage
         If you are a creating a Dependency, you should not use
         If you are using a Dependency, you should not create it
+
+
+JEST DOM
+https://github.com/testing-library/jest-dom

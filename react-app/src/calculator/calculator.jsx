@@ -1,5 +1,7 @@
 import React from 'react';
 import CalculatorResult from './calculator-result'
+
+
 const Calculator = () => {
     const [n1, setN1] = React.useState(0)
     const [n2, setN2] = React.useState(0)
