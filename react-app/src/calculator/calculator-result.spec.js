@@ -1,0 +1,1 @@
+/* Write the test to ensure that the CalculatorResult components displays whatever is given to it */

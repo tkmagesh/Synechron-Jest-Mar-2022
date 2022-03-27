@@ -14,7 +14,7 @@ const Greeter = () => {
             <label htmlFor="txtUserName">User Name :</label>
             <input type="text" id="txtUserName" onChange={ evt => setUserName(evt.target.value)} />
             <button onClick={onGreetClick}>Greet</button>
-            <div>
+            <div data-testid="divGreetMessage">
                 {greetMsg}
             </div>
         </>

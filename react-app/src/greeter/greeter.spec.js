@@ -20,8 +20,10 @@ describe('Greeter', () => {
             
         expect(txtUserName).toBeDefined()
         expect(btnGreeter).toBeDefined()
-        const divResult = screen.getByText(expectedResult)
-        expect(divResult).toBeDefined()
+        const divResult = screen.getByTestId('divGreetMessage')
+        expect(divResult).toHaveTextContent(expectedResult)
+        //const divResult = screen.getByText(expectedResult)
+        //expect(divResult).toBeDefined()
         //userEvent.type()
     })
 })
