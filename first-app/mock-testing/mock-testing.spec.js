@@ -58,8 +58,8 @@ describe('mocking', () => {
 
         const actualResult = transform(testData, mockTransformFn)
 
-        console.log(mockTransformFn.mock)
-        console.log(actualResult)
+        //console.log(mockTransformFn.mock)
+        //console.log(actualResult)
 
         expect(mockTransformFn.mock.calls.length).toBe(testData.length)
 
