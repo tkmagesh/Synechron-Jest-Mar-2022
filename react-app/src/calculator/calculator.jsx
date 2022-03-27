@@ -1,5 +1,7 @@
 import React from 'react';
+
 import CalculatorResult from './calculator-result'
+
 
 
 const Calculator = () => {

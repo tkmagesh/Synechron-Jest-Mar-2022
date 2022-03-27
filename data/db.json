@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Pen"
+    },
+    {
+      "id": 2,
+      "name": "Pencil"
+    },
+    {
+      "id": 3,
+      "name": "Marker"
+    },
+    {
+      "id": 4,
+      "name": "Scribble Pad"
+    },
+    {
+      "id": 5,
+      "name": "Marker"
+    }
+  ],
+  "employees" : [
+      {"id" : 1, "firstName" : "Magesh", "lastName" : "Kuppan"},
+      {"id" : 2, "firstName" : "Suresh", "lastName" : "Kannan"}
+  ]
+}
