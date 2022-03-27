@@ -1,5 +1,5 @@
 const { addSync, addAsyncCallback, addAsyncPromise } = require('./async-demos')
-
+const rxjs = require('rxjs')
 describe('Async Demos', () => {
     describe('AddSync', () => {
         it('should be able to add 2 numbers', () => {
@@ -25,7 +25,7 @@ describe('Async Demos', () => {
         });
     })
 
-    describe('AddAsyncPromise', () => {
+    describe('AddAsyncPromise', ()=> {
         it('should be able to add 2 numbers [using done]', (done) => {
             //Arrange
             const n1 = 100,
@@ -50,6 +50,18 @@ describe('Async Demos', () => {
             //Act
             const result = await addAsyncPromise(n1, n2);
             expect(result).toBe(expectedResult)
+
+        });
+
+        it('should be able to add 2 numbers [using async await] - 2', async () => {
+            //Arrange
+            const n1 = 100,
+                n2 = 200,
+                expectedResult = 300;
+
+            //Act
+            const resultPromise = addAsyncPromise(n1, n2);
+            expect(resultPromise).resolves.toBe(expectedResult)
 
         });
 
@@ -108,5 +120,15 @@ describe('Async Demos', () => {
             expect(result2).toBe(expectedResult)
                 
         });
+    })
+
+    describe('Observables', () => {
+        it ('should be able to subscribe', (done) => {
+            rxjs.of(10)
+                .subscribe(no => {
+                    expect(no).toBe(10)
+                    done()
+                })
+        })
     })
 })

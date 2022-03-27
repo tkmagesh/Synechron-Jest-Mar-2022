@@ -13,7 +13,7 @@ function addAsyncCallback(x,y, callback){
         const result = x + y
         
         callback(result)
-    }, 3000)
+    }, 500)
 }
 
 function addAsyncPromise(x,y, callback){
@@ -21,9 +21,8 @@ function addAsyncPromise(x,y, callback){
     const p = new Promise((resolveFn, rejectFn) => {
         setTimeout(() => {
             const result = x + y
-    
             resolveFn(result)
-        }, 3000)
+        }, 500)
     })
     return p;
 }
