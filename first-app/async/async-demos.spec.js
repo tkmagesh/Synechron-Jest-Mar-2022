@@ -53,7 +53,7 @@ describe('Async Demos', () => {
 
         });
 
-        it('should be able to add 2 numbers [using multiple async operations]', (done) => {
+        it('should be able to add 2 numbers [using multiple async operations] [using done]', (done) => {
             //Arrange
             const n1 = 100,
                 n2 = 200,
@@ -90,6 +90,22 @@ describe('Async Demos', () => {
                     expect(result2).toBe(expectedResult)
                     done()
                 })
+                
+        });
+
+        it('should be able to add 2 numbers [using multiple async operations] [using async await]', async () => {
+            //Arrange
+            const n1 = 100,
+                n2 = 200,
+                expectedResult = 300;
+
+            //Act
+           
+            const p1 = addAsyncPromise(n1,n2)
+            const p2 = addAsyncPromise(n1,n2)
+            const [result1, result2] = await Promise.all([p1, p2]);
+            expect(result1).toBe(expectedResult)
+            expect(result2).toBe(expectedResult)
                 
         });
     })
