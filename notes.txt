@@ -78,3 +78,11 @@ https://github.com/testing-library/jest-dom
 To run the json-server
 From the folder that has the db.json file
     npx json-server db.json -p 3030
+
+TO BE DONE:
+    server communication tests
+    RSockets tests
+
+Examples from JEST author
+    https://github.com/kentcdodds/react-testing-library-examples
+    
